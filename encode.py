@@ -184,7 +184,7 @@ def register_command(message):
         pending_otp[user_id] = otp
 
         # Send OTP to admin via the second bot
-        otp_bot.send_message(admin_id, f"🔐 OTP for user {message.from_user.username or user_id}: <code>{otp},</code>", parse_mode="HTML",)
+        otp_bot.send_message(admin_id, f"🔐 OTP for user {message.from_user.username or user_id}: <code>{otp}</code>", parse_mode="HTML",)
 
         bot.reply_to(message, "Please enter the 6-digit OTP sent to the admin to complete your registration.")
 
